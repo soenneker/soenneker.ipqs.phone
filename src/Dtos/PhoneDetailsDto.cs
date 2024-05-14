@@ -2,19 +2,19 @@
 
 namespace Soenneker.Ipqs.Phone.Dtos;
 
-public class PhoneDetailsDto
+public record PhoneDetailsDto
 {
     [JsonPropertyName("message")]
-    public string Message { get; set; }
+    public string? Message { get; set; }
 
     [JsonPropertyName("success")]
     public bool Success { get; set; }
 
     [JsonPropertyName("formatted")]
-    public string Formatted { get; set; }
+    public string? Formatted { get; set; }
 
     [JsonPropertyName("local_format")]
-    public string LocalFormat { get; set; }
+    public string? LocalFormat { get; set; }
 
     [JsonPropertyName("valid")]
     public bool Valid { get; set; }
@@ -38,28 +38,28 @@ public class PhoneDetailsDto
     public bool Active { get; set; }
 
     [JsonPropertyName("name")]
-    public string Name { get; set; }
+    public string? Name { get; set; }
 
     [JsonPropertyName("carrier")]
-    public string Carrier { get; set; }
+    public string? Carrier { get; set; }
 
     [JsonPropertyName("line_type")]
-    public string LineType { get; set; }
+    public string? LineType { get; set; }
 
     [JsonPropertyName("country")]
-    public string Country { get; set; }
+    public string? Country { get; set; }
 
     [JsonPropertyName("region")]
-    public string Region { get; set; }
+    public string? Region { get; set; }
 
     [JsonPropertyName("city")]
-    public string City { get; set; }
+    public string? City { get; set; }
 
     [JsonPropertyName("timezone")]
-    public string Timezone { get; set; }
+    public string? Timezone { get; set; }
 
     [JsonPropertyName("zip_code")]
-    public string ZipCode { get; set; }
+    public string? ZipCode { get; set; }
 
     [JsonPropertyName("dialing_code")]
     public int DialingCode { get; set; }
@@ -74,20 +74,20 @@ public class PhoneDetailsDto
     public bool Spammer { get; set; }
 
     [JsonPropertyName("active_status")]
-    public string ActiveStatus { get; set; }
+    public string? ActiveStatus { get; set; }
 
     [JsonPropertyName("user_activity")]
-    public string UserActivity { get; set; }
+    public string? UserActivity { get; set; }
 
     [JsonPropertyName("associated_email_addresses")]
-    public EmailInfoDto AssociatedEmailAddresses { get; set; }
+    public EmailInfoDto? AssociatedEmailAddresses { get; set; }
 
     [JsonPropertyName("mnc")]
-    public string Mnc { get; set; }
+    public string? Mnc { get; set; }
 
     [JsonPropertyName("mcc")]
-    public string Mcc { get; set; }
+    public string? Mcc { get; set; }
 
     [JsonPropertyName("request_id")]
-    public string RequestId { get; set; }
+    public string? RequestId { get; set; }
 }
