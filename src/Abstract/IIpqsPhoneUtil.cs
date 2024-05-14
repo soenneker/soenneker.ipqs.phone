@@ -1,3 +1,4 @@
+using System.Threading;
 using System.Threading.Tasks;
 using Soenneker.Ipqs.Phone.Dtos;
 
@@ -8,5 +9,5 @@ namespace Soenneker.Ipqs.Phone.Abstract;
 /// </summary>
 public interface IIpqsPhoneUtil
 {
-    ValueTask<PhoneDetailsDto?> GetPhoneDetails(string number);
+    ValueTask<PhoneDetailsDto?> GetPhoneDetails(string number, CancellationToken cancellationToken = default);
 }
