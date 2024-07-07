@@ -33,7 +33,7 @@ public class IpqsPhoneUtil: IIpqsPhoneUtil
     {
         var url = $"{_baseUrl}{_apiKey}/{number}?country[]=US";
 
-        var result = await (await _ipqsClientUtil.Get()).SendToType<PhoneDetailsDto>(url, _logger, cancellationToken: cancellationToken);
+        var result = await (await _ipqsClientUtil.Get(cancellationToken)).SendToType<PhoneDetailsDto>(url, _logger, cancellationToken: cancellationToken);
 
         return result;
     }
