@@ -42,7 +42,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.Extensions.Configuration" Version="3.0.562" />
+        <PackageReference Include="Soenneker.Extensions.Configuration" Version="3.0.565" />
         <PackageReference Include="Soenneker.Extensions.HttpClient" Version="3.0.2107" />
         <PackageReference Include="Soenneker.Ipqs.Client" Version="3.0.766" />
     </ItemGroup>
