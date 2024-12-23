@@ -1,9 +1,6 @@
-using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
 using Soenneker.Ipqs.Phone.Abstract;
 using Soenneker.Tests.FixturedUnit;
 using Xunit;
-
 
 namespace Soenneker.Ipqs.Phone.Tests;
 
@@ -15,5 +12,11 @@ public class IpqsPhoneUtilTests : FixturedUnitTest
     public IpqsPhoneUtilTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
     {
         _util = Resolve<IIpqsPhoneUtil>(true);
+    }
+
+    [Fact]
+    public void Default()
+    {
+
     }
 }

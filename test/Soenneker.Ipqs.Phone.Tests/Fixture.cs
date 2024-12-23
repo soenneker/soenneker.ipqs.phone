@@ -2,8 +2,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using Soenneker.Fixtures.Unit;
-using Soenneker.Ipqs.Phone.Registrars;
 using Soenneker.Utils.Test;
+using Soenneker.Ipqs.Phone.Registrars;
 
 namespace Soenneker.Ipqs.Phone.Tests;
 
@@ -25,6 +25,7 @@ public class Fixture : UnitFixture
 
         IConfiguration config = TestUtil.BuildConfig();
         services.AddSingleton(config);
+
         services.AddIpqsPhoneUtilAsScoped();
     }
 }
