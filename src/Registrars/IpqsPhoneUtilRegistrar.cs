@@ -1,3 +1,4 @@
+﻿```
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Soenneker.Ipqs.Client.Registrars;
@@ -13,18 +14,21 @@ public static class IpqsPhoneUtilRegistrar
     /// <summary>
     /// Adds <see cref="IIpqsPhoneUtil"/> as a singleton service. <para/>
     /// </summary>
-    public static void AddIpqsPhoneUtilAsSingleton(this IServiceCollection services)
+    public static IServiceCollection AddIpqsPhoneUtilAsSingleton(this IServiceCollection services)
     {
         services.AddIpqsClientUtilAsSingleton();
         services.TryAddSingleton<IIpqsPhoneUtil, IpqsPhoneUtil>();
+        return services;
     }
 
     /// <summary>
     /// Adds <see cref="IIpqsPhoneUtil"/> as a scoped service. <para/>
     /// </summary>
-    public static void AddIpqsPhoneUtilAsScoped(this IServiceCollection services)
+    public static IServiceCollection AddIpqsPhoneUtilAsScoped(this IServiceCollection services)
     {
         services.AddIpqsClientUtilAsSingleton();
         services.TryAddScoped<IIpqsPhoneUtil, IpqsPhoneUtil>();
+        return services;
     }
 }
+```
