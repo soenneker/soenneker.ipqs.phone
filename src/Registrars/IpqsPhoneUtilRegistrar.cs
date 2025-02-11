@@ -1,5 +1,4 @@
-﻿```
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Soenneker.Ipqs.Client.Registrars;
 using Soenneker.Ipqs.Phone.Abstract;
@@ -31,4 +30,3 @@ public static class IpqsPhoneUtilRegistrar
         return services;
     }
 }
-```
