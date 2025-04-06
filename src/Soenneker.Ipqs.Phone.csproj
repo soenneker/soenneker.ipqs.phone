@@ -44,6 +44,6 @@
     <ItemGroup>
         <PackageReference Include="Soenneker.Extensions.Configuration" Version="3.0.663" />
         <PackageReference Include="Soenneker.Extensions.HttpClient" Version="3.0.3188" />
-        <PackageReference Include="Soenneker.Ipqs.Client" Version="3.0.1276" />
+        <PackageReference Include="Soenneker.Ipqs.Client" Version="3.0.1278" />
     </ItemGroup>
 </Project>
