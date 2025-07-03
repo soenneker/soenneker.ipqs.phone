@@ -14,7 +14,7 @@ using System.Threading;
 namespace Soenneker.Ipqs.Phone;
 
 /// <inheritdoc cref="IIpqsPhoneUtil"/>
-public class IpqsPhoneUtil: IIpqsPhoneUtil
+public sealed class IpqsPhoneUtil: IIpqsPhoneUtil
 {
     private readonly IIpqsClientUtil _ipqsClientUtil;
     private readonly ILogger<IpqsPhoneUtil> _logger;
@@ -33,8 +33,6 @@ public class IpqsPhoneUtil: IIpqsPhoneUtil
     {
         var url = $"{_baseUrl}{_apiKey}/{number}?country[]=US";
 
-        var result = await (await _ipqsClientUtil.Get(cancellationToken)).SendToType<PhoneDetailsDto>(url, _logger, cancellationToken: cancellationToken);
-
-        return result;
+        return await (await _ipqsClientUtil.Get(cancellationToken)).SendToType<PhoneDetailsDto>(url, _logger, cancellationToken: cancellationToken);
     }
 }
