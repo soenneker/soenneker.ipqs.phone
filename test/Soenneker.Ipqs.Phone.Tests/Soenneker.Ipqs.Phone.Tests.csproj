@@ -27,7 +27,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Soenneker.Ipqs.Phone.csproj" />
+        <ProjectReference Include="..\..\src\Soenneker.Ipqs.Phone\Soenneker.Ipqs.Phone.csproj" />
     </ItemGroup>
 
     <ItemGroup>
