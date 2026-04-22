@@ -38,7 +38,7 @@ jobs:
         run: dotnet build test/Soenneker.Ipqs.Phone.Tests/Soenneker.Ipqs.Phone.Tests.csproj --configuration Release --no-restore --verbosity minimal
 
       - name: Test
-        run: dotnet test test/Soenneker.Ipqs.Phone.Tests/Soenneker.Ipqs.Phone.Tests.csproj --configuration Release --no-build --no-restore --verbosity minimal
+        run: dotnet test --project test/Soenneker.Ipqs.Phone.Tests/Soenneker.Ipqs.Phone.Tests.csproj --configuration Release --no-build --no-restore --verbosity minimal
 
       - name: Pack
         run: dotnet pack src/Soenneker.Ipqs.Phone/Soenneker.Ipqs.Phone.csproj --configuration Release --no-build --no-restore --output . --verbosity minimal
