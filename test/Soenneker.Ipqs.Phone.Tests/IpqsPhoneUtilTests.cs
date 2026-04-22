@@ -1,20 +1,19 @@
 using Soenneker.Ipqs.Phone.Abstract;
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Ipqs.Phone.Tests;
 
-[Collection("Collection")]
-public class IpqsPhoneUtilTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public class IpqsPhoneUtilTests : HostedUnitTest
 {
     private readonly IIpqsPhoneUtil _util;
 
-    public IpqsPhoneUtilTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public IpqsPhoneUtilTests(Host host) : base(host)
     {
         _util = Resolve<IIpqsPhoneUtil>(true);
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
