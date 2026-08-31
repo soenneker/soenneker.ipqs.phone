@@ -13,7 +13,6 @@ using System.Threading;
 
 namespace Soenneker.Ipqs.Phone;
 
-/// <inheritdoc cref="IIpqsPhoneUtil"/>
 public sealed class IpqsPhoneUtil: IIpqsPhoneUtil
 {
     private readonly IIpqsClientUtil _ipqsClientUtil;
@@ -31,7 +30,9 @@ public sealed class IpqsPhoneUtil: IIpqsPhoneUtil
 
     public async ValueTask<PhoneDetailsDto?> GetPhoneDetails(string number, CancellationToken cancellationToken = default)
     {
-        var url = $"{_baseUrl}{_apiKey}/{number}?country[]=US";
+        string escapedApiKey = Uri.EscapeDataString(_apiKey);
+        string escapedNumber = Uri.EscapeDataString(number);
+        var url = $"{_baseUrl}{escapedApiKey}/{escapedNumber}?country[]=US";
 
         return await (await _ipqsClientUtil.Get(cancellationToken)).SendToType<PhoneDetailsDto>(url, _logger, cancellationToken: cancellationToken);
     }

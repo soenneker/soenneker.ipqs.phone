@@ -6,7 +6,7 @@ using Soenneker.Ipqs.Phone.Abstract;
 namespace Soenneker.Ipqs.Phone.Registrars;
 
 /// <summary>
-/// A utility library for IPQualityScore phone related operations
+/// Registers IPQualityScore phone-number inspection.
 /// </summary>
 public static class IpqsPhoneUtilRegistrar
 {

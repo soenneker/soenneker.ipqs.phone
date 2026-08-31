@@ -5,15 +5,15 @@ using Soenneker.Ipqs.Phone.Dtos;
 namespace Soenneker.Ipqs.Phone.Abstract;
 
 /// <summary>
-/// A utility library for IPQualityScore phone related operations
+/// Retrieves IPQualityScore validity, fraud, carrier, line-type, and risk details for US phone numbers.
 /// </summary>
 public interface IIpqsPhoneUtil
 {
     /// <summary>
-    /// Gets phone details.
+    /// Gets IPQualityScore details for a US phone number.
     /// </summary>
-    /// <param name="number">The number.</param>
+    /// <param name="number">The phone number to inspect.</param>
     /// <param name="cancellationToken">The cancellation token.</param>
-    /// <returns>A task containing the result of the operation.</returns>
+    /// <returns>The phone details, or <see langword="null"/> when no response body is available.</returns>
     ValueTask<PhoneDetailsDto?> GetPhoneDetails(string number, CancellationToken cancellationToken = default);
 }
