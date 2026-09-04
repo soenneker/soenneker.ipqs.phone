@@ -13,6 +13,7 @@ using System.Threading;
 
 namespace Soenneker.Ipqs.Phone;
 
+/// <inheritdoc cref="IIpqsPhoneUtil" />
 public sealed class IpqsPhoneUtil: IIpqsPhoneUtil
 {
     private readonly IIpqsClientUtil _ipqsClientUtil;
