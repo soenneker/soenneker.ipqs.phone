@@ -24,7 +24,7 @@ public sealed class IpqsPhoneUtil: IIpqsPhoneUtil
 
     public IpqsPhoneUtil(IIpqsClientUtil ipqsClientUtil, IConfiguration config, ILogger<IpqsPhoneUtil> logger)
     {
-        _apiKey = config.GetValueStrict<string>("Ipqs:ApiKey");
+        _apiKey = config.GetStringStrict("Ipqs:ApiKey");
         _ipqsClientUtil = ipqsClientUtil;
         _logger = logger;
     }
